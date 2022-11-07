@@ -1,0 +1,47 @@
+header{
+    background-color: rgb(102, 139, 175);
+    padding: 30px;
+    text-align: center;
+    color:white;
+}
+
+main{
+    background-color: indianred;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.btn .container p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+input{
+    width: 300px;
+    padding:10px;
+    border-radius: 5%;
+    border-color: white;
+
+}
+
+#search{
+    padding:5px;
+    margin-top: 5px;
+    border-radius: 5%;
+    border-color: darkblue;
+    background-color:darkblue;
+    color: white;
+}
+input[type=text] {
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 100%;
+}

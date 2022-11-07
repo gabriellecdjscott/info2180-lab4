@@ -65,8 +65,36 @@ $superheroes = [
 
 ?>
 
+
+<?php
+    $inq = $_GET["h"];
+    $found=[];
+    $count=0;
+    
+    $inquiry =filter_var($inq, FILTER_SANITIZE_STRING);
+
+    foreach($superheroes as $hero){
+        if (array_search($inquiry,$hero)){
+            $found=$hero;
+            $count= $count + 1;
+        }
+    }
+?>
+
+<?php if($inquiry!=""){?>
+
+    <?php if($count > 0){ ?>
+    <h3><?php echo($found["alias"]);?></h3>
+    <h4><?php echo("A.K.A ".$found["name"]."<br>");?></h4>
+        
+    <p><?php echo($found["biography"]."<br>");?></p>
+    <?php }else{
+            echo("Superhero not found");
+    } ?>
+<?php }else{ ?>
 <ul>
 <?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
+<li><?= $superhero['alias']; ?></li>
 <?php endforeach; ?>
 </ul>
+<?php } ?>
